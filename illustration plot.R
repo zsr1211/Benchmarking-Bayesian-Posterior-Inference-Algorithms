@@ -1,3 +1,6 @@
+# this script is used to create the illustration plot of sampling algorithms:
+# NUTS, ZigZag, BPS and Boomerang.
+
 my_theme_large <- theme_bw(base_size = 18) +
   theme(
     text = element_text(size = 18),
