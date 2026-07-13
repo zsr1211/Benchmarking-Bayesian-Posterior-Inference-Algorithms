@@ -1,4 +1,4 @@
-# This script runs only MCMC for posteriorDB posteriors with has_ref == 0,
+# This script runs only MCMC for posteriorDB posteriors without reference,
 # grouped by complexity_withNA, using seed 4711.
 # It saves both the CmdStanMCMC fit object and unconstrained draws.
 # try rto find reference draws by ourselves
@@ -15,6 +15,10 @@ pdb <- pdb_local("/Users/zhangsr/Desktop/UvA/Thesis/posteriorDB/posteriordb")
 
 # keep only posteriors where has_ref == 0
 summary_df_no_ref <- summary_df[summary_df$has_ref == 0, ]
+# Note, here, summary_df comes from the initial laplace condition number result (without my own reference draws)
+# so it only show if this posterior has refrence draws from posteriorDB
+# but now the summary_df was updated with the new refrence draws that I generated.
+
 
 # Posterior groups
 posterior_groups <- list(
